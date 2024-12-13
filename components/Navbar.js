@@ -5,7 +5,7 @@ import { FaShoppingCart, FaUserCircle, FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white text-black p-4">
+    <nav className="bg-white text-black p-4 fixed top-0 w-full z-10">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center space-x-4">
           <Link href="/">
@@ -22,7 +22,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-6">
           <ul className="hidden md:flex space-x-8">
             <li>
-              <Link href="#" className="hover:text-blue-400">
+              <Link href="/" className="hover:text-blue-400">
                 Home
               </Link>
             </li>

@@ -1,14 +1,12 @@
+import ProductTable from "@/components/ProductTable";
 import CartItem from "../../components/CartItem";
+import DiscountSection from "@/components/discountSection";
 
 const Cart = () => {
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-2xl font-bold mb-4">Your Cart</h1>
-      {/* {cart.length === 0 ? (
-        <p>Your cart is empty.</p>
-      ) : (
-        cart.map((product) => <CartItem key={product.id} product={product} />)
-      )} */}
+    <div className="mt-10 pt-4">
+      <ProductTable />
+      <DiscountSection />
     </div>
   );
 };

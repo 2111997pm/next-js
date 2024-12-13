@@ -21,6 +21,14 @@ export const reviews = [
     review:
       "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
     rating: 4,
-    image: "https://via.placeholder.com/50", 
+    image: "https://via.placeholder.com/50",
+  },
+  {
+    id: 4,
+    name: "Savannah Nguyen",
+    review:
+      "Ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.",
+    rating: 4,
+    image: "https://via.placeholder.com/50",
   },
 ];
