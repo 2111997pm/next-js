@@ -7,6 +7,7 @@ export default function Card({
   oldPrice,
   discount,
   rating,
+  addToCart,
 }) {
   return (
     <div className="bg-white rounded-lg shadow-md p-3 mt-10 flex flex-col">
@@ -50,7 +51,10 @@ export default function Card({
           <span className="text-sm text-red-500">{discount}</span>
         </div>
       </div>
-      <button className="mt-auto w-full bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700 transition">
+      <button
+        className="mt-auto w-full bg-teal-600 text-white py-2 rounded-md hover:bg-teal-700 transition"
+        onClick={addToCart}
+      >
         Add To Cart
       </button>
     </div>

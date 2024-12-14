@@ -1,5 +1,4 @@
 import ProductTable from "@/components/ProductTable";
-import CartItem from "../../components/CartItem";
 import DiscountSection from "@/components/DiscountSection";
 const Cart = () => {
   return (

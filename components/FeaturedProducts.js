@@ -1,5 +1,5 @@
 "use client";
-
+import { useCart } from "@/context/cartContext";
 import Card from "./Card";
 import React, { useEffect } from "react";
 import useApi from "@/utils/apiUse";
@@ -7,6 +7,7 @@ import Loader from "./Loader";
 
 export default function FeaturedProducts() {
   // Use useapi custome hooks for call api
+  const { addToCart } = useCart();
 
   const URL = "https://fakestoreapi.com";
   const { data, error, loading, fetchData } = useApi(URL);
@@ -54,6 +55,7 @@ export default function FeaturedProducts() {
                 price={product.price}
                 oldPrice={product.oldPrice}
                 rating={product.rating.rate}
+                addToCart={() => addToCart(product)}
               />
             ))}
       </div>

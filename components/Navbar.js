@@ -1,9 +1,12 @@
+"use client";
 import Link from "next/link";
 import Image from "next/image";
 
 import { FaShoppingCart, FaUserCircle, FaSearch } from "react-icons/fa";
+import { useCart } from "@/context/cartContext";
 
 const Navbar = () => {
+  const { cartItems } = useCart();
   return (
     <nav className="bg-white text-black p-4 fixed top-0 w-full z-10">
       <div className="container mx-auto flex justify-between items-center">
@@ -56,7 +59,12 @@ const Navbar = () => {
           <FaSearch className="text-xl cursor-pointer hover:text-blue-400" />
           <FaUserCircle className="text-xl cursor-pointer hover:text-blue-400" />
           <Link href="/cart">
-            <FaShoppingCart className="text-xl cursor-pointer hover:text-blue-400" />
+            <div className="relative">
+              <FaShoppingCart className="text-xl cursor-pointer hover:text-blue-400" />
+              <span className="absolute top-[-10px] right-[-10px] bg-red-500 text-white text-xs font-bold rounded-full px-2 py-0.5">
+                {cartItems.length}
+              </span>
+            </div>
           </Link>
         </div>
       </div>
